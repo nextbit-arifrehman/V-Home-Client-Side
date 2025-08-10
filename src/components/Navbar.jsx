@@ -57,7 +57,7 @@ export default function Navbar() {
       <Link to="/">
         <Button 
           variant="ghost" 
-          className={`${mobile ? 'w-full justify-start' : ''} text-neutral-700 hover:text-primary`}
+          className={`${mobile ? 'w-full justify-start' : ''} text-neutral-600 hover:text-primary hover:bg-primary/5 transition-colors duration-200`}
           onClick={onClose}
         >
           <Home className="w-4 h-4 mr-2" />
@@ -68,7 +68,7 @@ export default function Navbar() {
       <Link to="/all-properties">
         <Button 
           variant="ghost" 
-          className={`${mobile ? 'w-full justify-start' : ''} text-neutral-700 hover:text-primary`}
+          className={`${mobile ? 'w-full justify-start' : ''} text-neutral-600 hover:text-primary hover:bg-primary/5 transition-colors duration-200`}
           onClick={onClose}
         >
           <Building className="w-4 h-4 mr-2" />
@@ -81,7 +81,7 @@ export default function Navbar() {
           <Link to="/dashboard">
             <Button 
               variant="ghost" 
-              className={`${mobile ? 'w-full justify-start' : ''} text-neutral-700 hover:text-primary`}
+              className={`${mobile ? 'w-full justify-start' : ''} text-neutral-600 hover:text-primary hover:bg-primary/5 transition-colors duration-200`}
               onClick={onClose}
             >
               <LayoutDashboard className="w-4 h-4 mr-2" />
@@ -94,13 +94,13 @@ export default function Navbar() {
   );
 
   return (
-    <header className="bg-white shadow-sm border-b border-neutral-200 sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-primary/5 via-white to-primary/5 backdrop-blur-sm sticky top-0 z-50 border-b border-neutral-200/80 shadow-lg shadow-primary/5">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
           <Link to="/">
             <div className="flex items-center space-x-3 cursor-pointer group">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-700 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-700 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/20">
                 <Home className="text-white text-xl" />
               </div>
               <div>
@@ -149,12 +149,17 @@ export default function Navbar() {
               ) : (
                 <div className="flex items-center space-x-3">
                   <Link to="/login">
-                    <Button variant="ghost" className="text-neutral-700 hover:text-primary hover:bg-primary/5 px-6 py-2">
+                    <Button 
+                      variant="ghost" 
+                      className="text-neutral-600 hover:text-primary hover:bg-primary/5 px-6 py-2 transition-all duration-200"
+                    >
                       Sign In
                     </Button>
                   </Link>
                   <Link to="/register">
-                    <Button className="bg-gradient-to-r from-primary to-blue-700 text-white hover:from-primary/90 hover:to-blue-700/90 px-6 py-2 shadow-md">
+                    <Button 
+                      className="bg-gradient-to-r from-primary to-blue-700 text-white hover:from-primary/90 hover:to-blue-700/90 px-6 py-2 shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-200"
+                    >
                       Get Started
                     </Button>
                   </Link>
