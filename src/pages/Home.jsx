@@ -283,13 +283,13 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/properties">
-                <Button className="bg-white text-secondary px-8 py-3 hover:bg-green-50">
+                <Button className="bg-white text-secondary px-8 py-3 hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-200 font-semibold">
                   <SearchIcon className="w-5 h-5 mr-2" />
                   Find Properties
                 </Button>
               </Link>
               <Link to="/register">
-                <Button variant="outline" className="border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-secondary">
+                <Button className="bg-white text-secondary px-8 py-3 hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-200 font-semibold">
                   <Users className="w-5 h-5 mr-2" />
                   Become an Agent
                 </Button>
